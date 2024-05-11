@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid_container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "sidebar grilla grilla grilla"
+    "footer footer footer footer"
+    ;
+
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr 80px;
+
+
+    .header {
+        grid-area: header;
+        background-color: bisque;
+        display: flex;
+        align-items: center;
+        background-image: url("../img/headerbackground.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+     
+        div{
+
+
+            img {
+                
+              
+                
+                max-width: 100%; // Hace que la imagen sea responsiva
+                height: auto; // Mantiene la proporción de aspecto de la imagen
+                margin-right: 40px; // Espacio entre el logo y el texto
+                width: 300px; /* Ajusta el tamaño según tu preferencia */
+                margin-left: 60px;
+            }
+            
+            
+           
+        }
+
+
+    }
+    .sidebar {
+        background-color: rgb(31, 18, 24);
+        grid-area: sidebar;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: right;
+        padding: 10px;
+         // Ajusta el espacio interior del sidebar
+
+        // Estilo para el primer div del sidebar (nombre de usuario y correo electrónico)
+         
+           .user-info {
+            padding: 5px 20px;
+            border-radius: 10px;
+           
+            background: transparent;
+            text-align: center;
+            color: antiquewhite;
+            margin-bottom: 10px; // Espacio entre el primer div y los siguientes
+
+            h4{
+                text-align: center;
+
+
+                i{
+                    margin-right: 5px;
+                }
+            }
+
+            p{
+                
+                color: green;
+                
+            }
+    }
+
+
+            .tipo-arma {
+                background-color: antiquewhite;
+                width: 200px;
+                height: 50px;
+                margin: 5px;
+                padding: 5px;
+                border: 2px solid black;
+                transition: background-color 0.3s ease;
+                cursor: pointer; 
+                transition: transform 0.3s ease; 
+            }
+            .tipo-arma:hover {
+                transform: scale(1.1); 
+                background-color: #d34aee; 
+            }
+
+            .inventario {
+               
+               background-color: antiquewhite;
+                width: 200px;
+                height: 50px;
+                margin: 60px;
+                padding: 10px;
+                border: 2px solid black;
+                transition: background-color 0.3s ease; 
+                cursor: pointer; 
+                transition: transform 0.3s ease;
+            
+            }
+            .inventario:hover {
+                transform: scale(1.1); 
+                background-color: #056b44;
+            }
+
+            i{
+                margin-right: 5px;
+            }
+
+    }
+    .grilla {
+       
+        
+        grid-area: grilla;
+        padding: 15px;
+        background-color:rgb(59, 17, 42) ;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        height: calc(100vh - 160px); 
+        overflow-y: auto;
+        
+       
+
+
+        div{
+            
+            background-color: rgb(13, 29, 59);
+            color: aliceblue;
+            margin: 5px 5px 5px;
+            border-radius: 15px;
+            padding: 10px 10px 10px 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            /*background-image: url("./assets/img/backgroundcards.jpg");*/
+            /* background-repeat: no-repeat;*/
+            /*background-position: center;*/
+            cursor: pointer; 
+            transition: transform 0.3s ease;
+           
+
+          
+            
+            
+        }
+        div:hover {
+            transform: scale(1.1); 
+            background-color: #6b056b;
+            
+        }
+        
+    }
+    .footer {
+
+        grid-area: footer;
+        background-color:rgb(3, 3, 19) ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* Ambos elementos ocuparán el 50% del ancho del contenedor */
+        padding: 20px;
+        border: 1px solid #ccc;
+
+        h1 {
+            
+            font-size: 20px;
+            text-align: center;
+            color: aliceblue;
+            
+     
+      
+            }
+
+        
+
+    }
+
+}
